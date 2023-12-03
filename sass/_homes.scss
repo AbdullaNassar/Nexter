@@ -1,5 +1,8 @@
 .homes {
   grid-column: 3/11;
+  @media (max-width: 1000px) {
+   grid-column: 2/10;
+  }
   margin: 15rem 0;
 
   display: grid;

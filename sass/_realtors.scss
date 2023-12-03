@@ -7,12 +7,24 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  @media (max-width: 1000px) {
+    grid-column: 1/-1;
+    // grid-row: 3/4;
+  }
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
     column-gap: 2rem;
     row-gap: 5vh;
     align-items: center;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(3, min-content max-content);
+      // column-gap: 5rem;
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: auto;
+    }
   }
 
   &__img {

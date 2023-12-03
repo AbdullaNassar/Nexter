@@ -25,6 +25,10 @@ $font-display: "Josefin Sans", sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem=10px
+
+  @media (max-width: 1200px) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -40,4 +44,11 @@ body {
   grid-template-columns:
     8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem))
     minmax(6rem, 1fr);
+
+  @media (max-width: 1000px) {
+    grid-template-rows: 6rem calc(100vh - 6rem);
+    grid-template-columns:
+      minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem))
+      minmax(6rem, 1fr);
+  }
 }
